@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #5b4b7a;
+    --card-bg: #ffffff;
+    --text-dark: #333;
+    --accent: #8e7fb1;
+    --radius: 24px;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+body { 
+    background: var(--bg-color); 
+}
+
+#app { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+
+/* Header & Search */
+.header { 
+    margin-bottom: 30px; 
+    background: rgba(255,255,255,0.1); 
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.user-info { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.avatar { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    border: 2px solid white; 
+    object-fit: cover;
+}
+
+.search-bar { 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 15px; 
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1); 
+    color: white; margin-bottom: 20px;
+}
+
+/* Categories */
+.categories { 
+    display: flex; 
+    gap: 10px; 
+    overflow-x: auto; 
+    padding-bottom: 10px; 
+    margin-bottom: 30px;
+}
+
+.cat-btn { 
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    border: none; 
+    background: white; 
+    color: var(--bg-color); 
+    font-weight: bold; 
+    white-space: nowrap; 
+    cursor: pointer;
+}
+
+.cat-btn:hover{ 
+    background: var(--accent); 
+    color: white; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Banner */
+.banner { 
+    background-image: url('img/background_banner2.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius); 
+    padding: 30px; 
+    margin-bottom: 30px; 
+}
+
+h4 { 
+    font-size: 1.5rem; 
+    margin-bottom: 10px;
+    color: white;
+}
+
+.banner-content { 
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+.subscription { 
+    margin-top: 15px; 
+    padding: 8px 20px; 
+    border-radius: 10px; border: 1px solid rgba(0, 0, 0, 0.416);
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+.subscription:hover { 
+    background: var(--accent); 
+    color: white; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+
+/* Card Component */
+.card { 
+    background: rgba(255, 255, 255, 0.81); 
+    border-radius: var(--radius); 
+    overflow: hidden; 
+    color: var(--text-dark); 
+    position: relative; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+}
+
+.card-info { 
+    padding: 15px; 
+}
+
+.card-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px; 
+    color: var(--text-dark);
+}
+.card-info .category { 
+    font-size: 0.7rem; 
+    color: #888; 
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.card-info .info { 
+    font-size: 0.8rem; 
+    color: #666; 
+    margin-top: 5px; 
+    height: 40px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-actions { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 10px; 
+    padding: 0 15px 15px;
+}
+
+.btn-info { 
+    border: none; 
+    background: none; 
+    color: blue; 
+    cursor: pointer; 
+    font-size: 0.7rem;
+}
+
+.btn-fav { 
+    background: #8e7fb1; 
+    color: white; 
+    border: none; 
+    width: 35px; 
+    height: 35px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.btn-fav.active { 
+    background: #ff4d4d; 
+}
+
+.btn-add { 
+    background: #8e7fb1; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 0.7rem; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-add.active { 
+    background: #4CAF50; 
+}
